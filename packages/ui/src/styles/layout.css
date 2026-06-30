@@ -1,0 +1,6 @@
+@layer utilities {
+  .chat-container {
+    max-width: var(--chat-max-width);
+    @apply mx-auto w-full px-4 sm:px-6;
+  }
+}

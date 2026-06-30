@@ -1,0 +1,62 @@
+---
+description: Nertura Constitution + Core — mandatory read order and compliance before any work
+alwaysApply: true
+---
+
+# Nertura Constitution + Core (mandatory)
+
+**Read order:**
+
+1. `docs/foundation/CONSTITUTION.md`
+2. `docs/foundation/NERTURA_CORE.md`
+3. Task-specific Core layer + Five Books chapter(s)
+
+**Foundation + Core win over code** until explicitly updated by the product team.
+
+## Before any implementation
+
+1. **Identify** relevant Core + Foundation chapters
+2. **Explain compliance** (before writing code)
+3. **Answer gate question:** Does this help the farmer make a better decision faster?
+4. **Implement** to match
+5. **Run quality matrix** + 12-dimension review when merging
+
+Full law: `docs/foundation/CONSTITUTION.md` · Index: `docs/foundation/NERTURA_CORE.md`
+
+## Compliance template
+
+```
+Foundation: docs/foundation/[path]
+Compliance: [how this satisfies Core + Foundation]
+Gate question: [yes/no]
+```
+
+## Core layer map
+
+| Work type | Read first |
+|-----------|------------|
+| UX / feel / screens | `03-experience-language/` + Book 02 |
+| Copy / i18n / TR | `04-writing-system/` + Book 04 Ch. 07 |
+| AI / Doctor / KB | `11-nertura-intelligence/` + Book 04 |
+| Merge / QA / DoD | `08-quality/` + `12-review-system/` |
+| Security | `09-security/` + Book 03 Ch. 07 |
+| Product / scope | Book 01 + Review System |
+| Code / API / DB | Book 03 |
+
+## Non-negotiables
+
+- `runIntelligenceEngine` only — no raw LLM to farmers
+- No mixed language in one farmer flow
+- No hardcoded farmer copy — `pnpm check:i18n`
+- No one-off CSS — `pnpm check:css-imports`
+- Farmer-facing: **analiz hakkı** not "credits"
+- No auto-send outreach / auto-publish content
+- Friendly user errors; RLS on tenant data
+
+## Conflicts
+
+Code violates Foundation → **fix code** or **amend Foundation + ADR** — never ignore.
+
+## Sprint end
+
+Produce 14-item sprint report per `AGENTS.md`.

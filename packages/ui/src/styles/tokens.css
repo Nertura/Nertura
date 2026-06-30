@@ -1,0 +1,86 @@
+@layer base {
+  :root {
+    /* shadcn / Tailwind HSL tokens */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 8%;
+    --primary: 162 69% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 97%;
+    --secondary-foreground: 222 47% 8%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 42%;
+    --accent: 162 69% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 162 69% 45%;
+    --radius: 0.75rem;
+    --chat-max-width: 52rem;
+
+    /* Nertura semantic tokens (mirror TS tokens — single source of truth) */
+    --nertura-bg: hsl(var(--background));
+    --nertura-surface: hsl(var(--card));
+    --nertura-surface-soft: hsl(var(--muted));
+    --nertura-border: hsl(var(--border));
+    --nertura-border-strong: hsl(214 32% 82%);
+    --nertura-text: hsl(var(--foreground));
+    --nertura-text-muted: hsl(var(--muted-foreground));
+    --nertura-primary: hsl(var(--primary));
+    --nertura-primary-hover: hsl(162 69% 40%);
+    --nertura-primary-soft: hsl(var(--primary) / 0.12);
+    --nertura-warning: #d4a017;
+    --nertura-danger: hsl(var(--destructive));
+    --nertura-success: hsl(var(--primary));
+    --nertura-radius-sm: calc(var(--radius) - 4px);
+    --nertura-radius-md: var(--radius);
+    --nertura-radius-lg: calc(var(--radius) + 4px);
+    --nertura-radius-xl: calc(var(--radius) + 8px);
+    --nertura-shadow-sm: 0 1px 2px rgba(20, 23, 22, 0.06);
+    --nertura-shadow-md: 0 4px 12px rgba(20, 23, 22, 0.08);
+    --nertura-shadow-lg: 0 8px 24px rgba(20, 23, 22, 0.12);
+    --nertura-z-header: 40;
+    --nertura-z-dropdown: 50;
+    --nertura-z-modal: 60;
+    --nertura-z-toast: 70;
+    --nertura-transition-fast: 150ms ease-out;
+    --nertura-transition-base: 200ms ease-out;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 98%;
+    --primary: 162 69% 52%;
+    --primary-foreground: 222 47% 8%;
+    --secondary: 217 33% 14%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 14%;
+    --muted-foreground: 215 20% 62%;
+    --accent: 162 69% 52%;
+    --accent-foreground: 222 47% 8%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217 33% 16%;
+    --input: 217 33% 16%;
+    --ring: 162 69% 52%;
+
+    --nertura-bg: hsl(var(--background));
+    --nertura-surface: hsl(var(--card));
+    --nertura-surface-soft: hsl(var(--muted));
+    --nertura-border: hsl(var(--border));
+    --nertura-border-strong: hsl(217 33% 22%);
+    --nertura-text: hsl(var(--foreground));
+    --nertura-text-muted: hsl(var(--muted-foreground));
+    --nertura-primary: hsl(var(--primary));
+    --nertura-primary-hover: hsl(162 69% 58%);
+    --nertura-primary-soft: hsl(var(--primary) / 0.16);
+    --nertura-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --nertura-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.24);
+    --nertura-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.32);
+  }
+}

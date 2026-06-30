@@ -1,0 +1,27 @@
+---
+description: Nertura AI Doctor behaviour — intelligence engine, vision, language, evidence
+globs: "{packages/ai/**,apps/**/api/**/doctor/**,apps/**/doctor/**,apps/**/components/doctor/**}"
+alwaysApply: false
+---
+
+# AI Doctor (Book 04)
+
+Full manual: `docs/foundation/04-ai-behaviour/`
+
+## Pipeline
+
+- Entry: `runIntelligenceEngine` in `packages/ai/src/intelligence-engine.ts`
+- Vision when image present; respect `VISION_MIN_CONFIDENCE` gates
+- Answers: short-first sections via `answer-formatter.ts` — not walls of text
+- Evidence: `buildEvidenceCards` with correct `language` — never `String(object)` in UI
+
+## Language
+
+- Lock conversation language (`tr` | `en`); no mixed languages in one session
+- Evidence card titles and upload errors must be localized
+
+## Safety
+
+- Never claim certainty; use "most likely", confidence %, "what to check next"
+- No automatic pesticide/chemical dosages; disclaimers on treatment guidance
+- Photo-only: ask clarifying questions; do not invent crop/species without vision support

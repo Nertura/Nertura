@@ -1,0 +1,10 @@
+{
+  "name": "Nertura — AI Agriculture Platform",
+  "short_name": "Nertura",
+  "description": "The AI Brain for Agriculture. Plant disease diagnosis and crop guidance.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2DDAAF",
+  "icons": []
+}

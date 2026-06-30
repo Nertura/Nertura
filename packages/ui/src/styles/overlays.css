@@ -1,0 +1,21 @@
+@layer components {
+  .nertura-overlay-scrim {
+    background-color: rgb(20 23 22 / 0.4);
+  }
+
+  .nertura-z-header {
+    z-index: var(--nertura-z-header);
+  }
+
+  .nertura-z-dropdown {
+    z-index: var(--nertura-z-dropdown);
+  }
+
+  .nertura-z-modal {
+    z-index: var(--nertura-z-modal);
+  }
+
+  .nertura-z-toast {
+    z-index: var(--nertura-z-toast);
+  }
+}

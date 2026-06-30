@@ -1,0 +1,30 @@
+---
+description: Nertura engineering standards — TypeScript, Next.js, Supabase, DoD
+globs: "{apps/**,packages/**}/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# Engineering (Book 03)
+
+**Constitution:** identify Foundation chapter → state compliance → then code (`docs/foundation/CONSTITUTION.md`).
+
+Full standard: `docs/foundation/03-engineering-standards/12-code-review-and-dod.md`
+
+## Before merge
+
+- `pnpm typecheck` and `pnpm lint` pass
+- No secrets in client code; `@nertura/ai` server-only
+- DB changes: new migration in `supabase/migrations/`, RLS reviewed
+- API routes: Zod validation, consistent error shapes, auth checked
+
+## Patterns
+
+- Match surrounding code; minimal diff; no drive-by refactors
+- Copy/i18n: use copy maps (`farm-map-copy.ts` pattern) — not hardcoded English in TR flows
+- Map UI: ~73% map / ~27% panel; panel scrolls independently (Book 02, Ch. 08)
+- After `pnpm build` while dev was running: `pnpm dev:fresh` — stale `.next` breaks CSS
+
+## Errors
+
+- User-facing: `friendlyDoctorError` / localized copy — not raw provider or stack messages
+- Log technical detail server-side only

@@ -1,0 +1,7 @@
+/* Button variants are implemented in @nertura/ui Button — token-driven via Tailwind theme. */
+@layer components {
+  .nertura-btn-touch {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

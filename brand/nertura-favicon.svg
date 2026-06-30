@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" role="img" aria-label="Nertura favicon">
+  <!-- Simplified mark for 1632px: kernel + core + top node only -->
+  <path
+    d="M16 3 L27.2 9.2 V22.8 L16 29 L4.8 22.8 V9.2 Z"
+    stroke="#2DDAAF"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+  <circle cx="16" cy="15" r="3" fill="#2DDAAF"/>
+  <circle cx="16" cy="5" r="1.75" fill="#2DDAAF"/>
+</svg>

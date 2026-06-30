@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" fill="none" role="img" aria-label="Nertura">
+  <!-- Mark -->
+  <g transform="translate(0 0)" stroke-linecap="round" stroke-linejoin="round">
+    <path
+      d="M24 4.5 L38.9 13.1 L38.9 30.3 L24 38.9 L9.1 30.3 L9.1 13.1 Z"
+      stroke="#2DDAAF"
+      stroke-width="2"
+    />
+    <path
+      d="M24 14 L31.5 26.5 L16.5 26.5 Z"
+      stroke="#2DDAAF"
+      stroke-width="1.75"
+    />
+    <circle cx="24" cy="22" r="2.75" fill="#2DDAAF"/>
+    <circle cx="24" cy="6.5" r="1.6" fill="#2DDAAF"/>
+    <circle cx="37.2" cy="13.8" r="1.6" fill="#2DDAAF"/>
+    <circle cx="10.8" cy="13.8" r="1.6" fill="#2DDAAF"/>
+    <path d="M17 41.5 H31" stroke="#2DDAAF" stroke-width="1.5" opacity="0.55"/>
+    <path d="M19 44 H29" stroke="#2DDAAF" stroke-width="1.5" opacity="0.35"/>
+  </g>
+  <!-- Wordmark -->
+  <text
+    x="58"
+    y="31"
+    fill="#0B1220"
+    font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif"
+    font-size="22"
+    font-weight="600"
+    letter-spacing="-0.4"
+  >Nertura</text>
+</svg>

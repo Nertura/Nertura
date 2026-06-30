@@ -1,0 +1,57 @@
+---
+description: Nertura Design System — Book 02 compliance for all UI surfaces
+globs: "{apps/marketing/**,apps/dashboard/**,apps/admin/**,packages/ui/**}/*.{tsx,ts,css}"
+alwaysApply: false
+---
+
+# Design System (Book 02)
+
+**Law:** `docs/foundation/NERTURA_CORE.md` · `docs/foundation/02-design-system/` · Architecture: `15-design-system-architecture.md`
+
+Before any UI change: read **Nertura Core** → identify Book 02 chapter → cite in compliance report.
+
+## CSS import rule (non-negotiable)
+
+- App `layout.tsx` → **only** `import './globals.css'`
+- App `globals.css` → **only** `@import "@nertura/ui/globals.css"`
+- **Never** import `@nertura/ui/globals.css` or `@nertura/ui/styles/globals.css` directly in app layouts
+- Run `pnpm check:css-imports` before shipping UI changes
+
+## One design language
+
+Marketing · dashboard · Doctor · map · admin · Growth AI share `@nertura/ui` tokens and patterns.
+
+- Use `@nertura/ui` components and tokens (`void`, `signal`, shadcn HSL vars) — **no one-off visual styles**
+- Do **not** change logo or primary green (`signal` / `#2DDAAF`) without product approval
+- **Mobile first** → tablet → desktop
+
+## Copy & language
+
+- **No mixed-language UI** in one flow (`tr` | `en` via copy maps / locale)
+- **No technical user-facing copy** — friendly farmer language; log details server-side
+
+## Surface rules
+
+| Surface | Rule |
+|---------|------|
+| **Map** | Desktop: ~73% map / ~27% panel; mobile: bottom-sheet / capped panel scroll (Book 02 Ch. 08) |
+| **AI Doctor** | Conversation-first composer; short-first answers (Book 02 Ch. 07) |
+| **Free users** | Minimal navigation; premium **locked**, not hidden |
+| **States** | Empty, loading, error, success per Book 02 Ch. 11 — info cards over red alarms where appropriate |
+
+## Compliance template (UI tasks)
+
+```
+Foundation: docs/foundation/02-design-system/[chapter].md
+Compliance: [how layout/tokens/states match Book 02]
+Gate question: [yes/no]
+```
+
+## Key chapters
+
+- Principles: `01-design-principles.md`
+- Responsive: `05-responsive-behavior.md`
+- Doctor: `07-doctor-ui.md` · Map: `08-map-ui.md` · Farm: `09-farm-and-field-ui.md`
+- States: `11-states-loading-empty-error.md`
+
+Pre-ship: [`docs/foundation/PRE_COMMIT_CHECKLIST.md`](../../docs/foundation/PRE_COMMIT_CHECKLIST.md)
